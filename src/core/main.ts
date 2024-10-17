@@ -10,6 +10,7 @@ const PORT = process.env.PORT || 3000;
 fastify.register(cors, {
   origin: "*",
   methods: ["GET"],
+  credentials: true,
 });
 
 fastify.get("/teste", async (request, reply) => {
